@@ -1,0 +1,181 @@
+/* Responsive CSS for S Shobana Enterprises */
+
+/* Mobile First Approach */
+@media (max-width: 768px) {
+    /* Typography */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .typing-text {
+        font-size: 1.2rem;
+    }
+    
+    /* Hero Section */
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: var(--spacing-xl);
+        transition: left var(--transition-normal);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: var(--spacing-md) 0;
+    }
+    
+    .nav-link {
+        font-size: 1.125rem;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Grid Layouts */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    /* Timeline */
+    .timeline-item::before {
+        left: -50px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.75rem;
+    }
+    
+    /* Project Filters */
+    .project-filters {
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+    
+    .filter-btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.875rem;
+    }
+    
+    /* Lightbox */
+    .lightbox-content {
+        width: 95vw;
+        margin: 2vh auto;
+    }
+    
+    .lightbox-image {
+        height: 40vh;
+    }
+    
+    .lightbox-info {
+        padding: 20px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .btn,
+    .hamburger {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: black;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 2cm 0;
+    }
+    
+    .section-title {
+        page-break-after: avoid;
+    }
+}
